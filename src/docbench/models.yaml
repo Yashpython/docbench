@@ -1,0 +1,44 @@
+# Model registry for `docbench run --model <id>`.
+#
+# WARNING: pricing below is a placeholder (null). Verify current $/token or $/page
+# rates on each provider's pricing page before trusting cost numbers in a report.
+
+models:
+  - id: gemini-3.6-flash
+    provider: gemini
+    api_model: gemini-3.6-flash
+    adapter: "docbench.adapters.gemini:GeminiAdapter"
+    pricing:
+      input_per_mtok: null
+      output_per_mtok: null
+
+  - id: gpt-5.6-luna
+    provider: openai
+    api_model: gpt-5.6-luna
+    adapter: "docbench.adapters.openai_adapter:OpenAIAdapter"
+    pricing:
+      input_per_mtok: null
+      output_per_mtok: null
+
+  - id: claude-haiku-4-5
+    provider: anthropic
+    api_model: claude-haiku-4-5-20251001
+    adapter: "docbench.adapters.anthropic_adapter:AnthropicAdapter"
+    pricing:
+      input_per_mtok: null
+      output_per_mtok: null
+
+  - id: qwen3-vl-32b
+    provider: together
+    api_model: "Qwen/Qwen3-VL-32B-Instruct"
+    adapter: "docbench.adapters.qwen_vl:QwenVLAdapter"
+    pricing:
+      input_per_mtok: null
+      output_per_mtok: null
+
+  - id: azure-docintel-receipt
+    provider: azure_docintel
+    api_model: prebuilt-receipt
+    adapter: "docbench.adapters.azure_docintel:AzureDocIntelAdapter"
+    pricing:
+      per_page: null
